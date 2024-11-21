@@ -1,0 +1,29 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.img-fluid {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
