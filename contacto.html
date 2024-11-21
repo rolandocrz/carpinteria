@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Carpintería</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6e68a8eab1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/form.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white text-uppercase" href="index.html"
+          >Carpintería</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white text-uppercase" href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white text-uppercase"
+                href="productos.html"
+                >Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white text-uppercase active"
+                href="contacto.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                class="form-control"
+                placeholder="Tu nombre completo"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor, introduce tu nombre.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Tu correo electrónico"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor, introduce un correo válido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                class="form-control"
+                placeholder="Tu número de teléfono"
+                pattern="[0-9]{10}"
+                required
+              />
+              <div class="invalid-feedback">
+                El número debe contener 10 dígitos.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                id="mensaje"
+                rows="4"
+                class="form-control"
+                placeholder="Escribe tu mensaje aquí"
+                required
+              ></textarea>
+              <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <div>
+            <h4 class="text-uppercase mb-0">Carpintería</h4>
+          </div>
+          <nav>
+            <ul class="list-unstyled d-flex gap-3 mb-0">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="nosotros.html" class="text-white text-decoration-none"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="productos.html" class="text-white text-decoration-none"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a href="contacto.html" class="text-white text-decoration-none"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="text-center mt-4 mb-1">
+          <p class="mb-0 text-white">
+            &copy; Todos los derechos reservados. Rolando Cruz
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
