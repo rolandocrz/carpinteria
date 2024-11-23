@@ -11,7 +11,7 @@
     ></script>
     <link rel="stylesheet" href="css/productos.css" />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -49,7 +49,7 @@
               <a
                 class="nav-link nav-link__login text-white text-uppercase"
                 href="login.html"
-                >Iniciar Session</a
+                >Iniciar Sesión</a
               >
             </li>
           </ul>
@@ -63,55 +63,56 @@
       <p class="lead">Diseño y fabricación de muebles únicos</p>
     </header>
 
-    <!-- Select para filtrar -->
-    <div class="container my-4">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <h3 class="mb-3">Lista de Muebles</h3>
-        </div>
-        <div class="col-md-8">
-          <label for="filtro-categoria" class="form-label visually-hidden"
-            >Filtrar por categoría:</label
-          >
-          <select id="filtro-categoria" class="form-select">
-            <option value="">Todas las Categorías</option>
-            <option value="silla">Silla</option>
-            <option value="mesa">Mesa</option>
-            <option value="escritorio">Escritorio</option>
-            <option value="puerta">Puerta</option>
-          </select>
+    <!-- Contenido Principal -->
+    <main class="flex-grow-1">
+      <!-- Select para filtrar -->
+      <div class="container my-4">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <h3 class="mb-3">Lista de Muebles</h3>
+          </div>
+          <div class="col-md-8">
+            <label for="filtro-categoria" class="form-label visually-hidden"
+              >Filtrar por categoría:</label
+            >
+            <select id="filtro-categoria" class="form-select">
+              <option value="">Todas las Categorías</option>
+              <option value="silla">Silla</option>
+              <option value="mesa">Mesa</option>
+              <option value="escritorio">Escritorio</option>
+              <option value="puerta">Puerta</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tabla de productos -->
-    <div class="container">
-      <div class="table-responsive">
-        <table id="tabla-muebles" class="table table-bordered table-hover">
-          <thead class="table-dark">
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Descripción</th>
-              <th>Categoría</th>
-              <th>Precio</th>
-              <th>Imagen</th>
-            </tr>
-          </thead>
-          <tbody id="tabla-body"></tbody>
-        </table>
+      <!-- Tabla de productos -->
+      <div class="container">
+        <div class="table-responsive">
+          <table id="tabla-muebles" class="table table-bordered table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-body"></tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4 mt-auto">
       <div class="container">
         <div
           class="d-flex flex-column flex-md-row justify-content-between align-items-center"
         >
-          <div>
-            <h4 class="text-uppercase mb-0">Carpintería</h4>
-          </div>
+          <div><h4 class="text-uppercase mb-0">Carpintería</h4></div>
           <nav>
             <ul class="list-unstyled d-flex gap-3 mb-0">
               <li>
