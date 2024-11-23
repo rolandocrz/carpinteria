@@ -104,24 +104,40 @@ function insertarMueble() {
     mostrarMensaje("Faltaron datos por capturar");
     return;
   }
-  const nuevoMueble = {
-    idMueble: idMueble,
-    nombre: nombre,
-    descripcion: descripcion,
-    categoria: categoria,
-    precio: precio,
-    urlImag: urlImag,
-  };
 
-  set(refS(db, "Muebles/" + idMueble), nuevoMueble)
-    .then(() => {
-      mostrarMensaje("Se agregó con éxito");
-      limpiarInputs();
-      listarMuebles();
+  // Verificar si el ID del mueble ya existe
+  const dbref = refS(db);
+  get(child(dbref, "Muebles/" + idMueble))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        // Si el mueble ya existe
+        alert("El ID del mueble ya existe. Ingresa otro ID.");
+      } else {
+        // Si no existe, agregar el mueble
+        const nuevoMueble = {
+          idMueble: idMueble,
+          nombre: nombre,
+          descripcion: descripcion,
+          categoria: categoria,
+          precio: precio,
+          urlImag: urlImag,
+        };
+
+        set(refS(db, "Muebles/" + idMueble), nuevoMueble)
+          .then(() => {
+            mostrarMensaje("Se agregó con éxito");
+            limpiarInputs();
+            listarMuebles();
+          })
+          .catch((error) => {
+            console.error("Error al agregar el mueble:", error);
+            mostrarMensaje("Ocurrió un error al agregar el mueble");
+          });
+      }
     })
     .catch((error) => {
-      console.error("Error al agregar el mueble:", error);
-      mostrarMensaje("Ocurrió un error al agregar el mueble");
+      console.error("Error al verificar el ID del mueble:", error);
+      mostrarMensaje("Ocurrió un error al verificar el ID del mueble");
     });
 }
 
