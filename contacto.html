@@ -66,12 +66,18 @@
       <h2 class="text-center mb-4">Contáctanos</h2>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form id="contactForm" novalidate method="post">
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/rolandocrzprz@gmail.com"
+            method="POST"
+            novalidate
+          >
             <div class="mb-3">
               <label for="nombre" class="form-label">Nombre</label>
               <input
                 type="text"
                 id="nombre"
+                name="Nombre"
                 class="form-control"
                 placeholder="Tu nombre completo"
                 required
@@ -85,6 +91,7 @@
               <input
                 type="email"
                 id="email"
+                name="Correo"
                 class="form-control"
                 placeholder="Tu correo electrónico"
                 required
@@ -98,6 +105,7 @@
               <input
                 type="tel"
                 id="telefono"
+                name="Telefono"
                 class="form-control"
                 placeholder="Tu número de teléfono"
                 pattern="[0-9]{10}"
@@ -111,6 +119,7 @@
               <label for="mensaje" class="form-label">Mensaje</label>
               <textarea
                 id="mensaje"
+                name="Mensaje"
                 rows="4"
                 class="form-control"
                 placeholder="Escribe tu mensaje aquí"
