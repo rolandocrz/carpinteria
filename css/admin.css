@@ -1,0 +1,101 @@
+/* carpinteria.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8f0;
+  color: #2e523e;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: #2e523e;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contenedor-formulario,
+.contenedor-tabla {
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.contenedor-formulario form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contenedor-formulario form input,
+.contenedor-formulario form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}

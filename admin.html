@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpintería | Muebles</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/6e68a8eab1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white text-uppercase" href="index.html"
+          >Carpintería</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white text-uppercase" href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white text-uppercase"
+                href="productos.html"
+                >Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white text-uppercase" href="contacto.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h3>CARPINTERÍA</h3>
+    <h1>Muebles</h1>
+    <div class="contenedor-principal">
+      <div class="contenedor-formulario">
+        <form id="formulario-muebles">
+          <label for="txtIdMueble">ID del mueble:</label>
+          <input type="text" id="txtIdMueble" name="txtIdMueble" />
+          <br /><br />
+          <label for="txtNombre">Nombre:</label>
+          <input type="text" id="txtNombre" name="txtNombre" /> <br /><br />
+          <label for="txtDescripcion">Descripción:</label>
+          <input type="text" id="txtDescripcion" name="txtDescripcion" />
+          <br /><br />
+          <label for="txtCategoria">Categoría:</label>
+          <select id="txtCategoria">
+            <option value="Silla">Silla</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Escritorio">Escritorio</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <br /><br />
+          <label for="txtPrecio">Precio:</label>
+          <input type="number" id="txtPrecio" name="txtPrecio" /> <br /><br />
+          <input type="file" class="subirArchivo" id="imagenInput" />
+          <button id="btnSubir">Subir imagen</button> <br /><br />
+          <label for="txtUrl">URL imagen:</label>
+          <input type="text" id="txtUrl" name="txtUrl" />
+          <p id="mensaje"></p>
+          <div id="progreso"></div>
+          <button type="button" id="btnAgregar">Agregar</button>
+          <button type="button" id="btnBuscar">Buscar</button>
+          <button type="button" id="btnActualizar">Actualizar</button>
+          <button type="button" id="btnBorrar">Borrar</button>
+          <button type="reset">Limpiar formulario</button>
+        </form>
+      </div>
+      <div class="contenedor-tabla">
+        <table id="tabla-muebles">
+          <thead>
+            <tr>
+              <th>ID mueble</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <div>
+            <h4 class="text-uppercase mb-0">Carpintería</h4>
+          </div>
+
+          <nav>
+            <ul class="list-unstyled d-flex gap-3 mb-0">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="nosotros.html" class="text-white text-decoration-none"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="productos.html" class="text-white text-decoration-none"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a href="contacto.html" class="text-white text-decoration-none"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="text-center mt-4 mb-1">
+          <p class="mb-0 text-white">
+            &copy; Todos los derechos reservados. Rolando Cruz
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>
