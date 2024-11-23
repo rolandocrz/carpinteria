@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpintería | Muebles</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/6e68a8eab1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/productos.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand text-white text-uppercase" href="index.html"
+          >Carpintería</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link__login text-uppercase"
+                href="login.html"
+              >
+                Iniciar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-dark text-white text-center py-5">
+      <h1 class="display-4">Observa Nuestros Productos</h1>
+      <p class="lead">Diseño y fabricación de muebles únicos</p>
+    </header>
+
+    <!-- Select para filtrar -->
+    <div class="container my-4">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <h3 class="mb-3">Lista de Muebles</h3>
+        </div>
+        <div class="col-md-8">
+          <label for="filtro-categoria" class="form-label visually-hidden"
+            >Filtrar por categoría:</label
+          >
+          <select id="filtro-categoria" class="form-select">
+            <option value="">Todas las Categorías</option>
+            <option value="silla">Silla</option>
+            <option value="mesa">Mesa</option>
+            <option value="escritorio">Escritorio</option>
+            <option value="puerta">Puerta</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla de productos -->
+    <div class="container">
+      <div class="table-responsive">
+        <table id="tabla-muebles" class="table table-bordered table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+        >
+          <div>
+            <h4 class="text-uppercase mb-0">Carpintería</h4>
+          </div>
+          <nav>
+            <ul class="list-unstyled d-flex gap-3 mb-0">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="nosotros.html" class="text-white text-decoration-none"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="productos.html" class="text-white text-decoration-none"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a href="contacto.html" class="text-white text-decoration-none"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="text-center mt-4">
+          <p class="mb-0 text-white">
+            &copy; 2024 Carpintería | Todos los derechos reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/productos.js" type="module"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
