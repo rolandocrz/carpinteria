@@ -27,3 +27,12 @@ p {
     padding: 0 15px;
   }
 }
+
+.nav-link__login {
+  padding: 8px 12px !important;
+  border: 1px solid #ffc107;
+}
+
+.nav-link__login:hover {
+  background-color: #ffc10750;
+}
